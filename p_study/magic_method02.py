@@ -39,15 +39,15 @@ v2 = Vector(23,35)
 v3 = Vector()
 
 # 매직메소드 출력
-print(Vector.__init__.__doc__)
-print(Vector.__repr__.__doc__)
-print(Vector.__add__.__doc__)
+print(Vector.__init__.__doc__)          # Create a Vector, example : v = Vector(5, 10)
+print(Vector.__repr__.__doc__)          # Return the vector infomation.
+print(Vector.__add__.__doc__)           # Return the vector addtion if self and othen
 
-print(v1,v2,v3)
+print(v1,v2,v3)                         # Vector(5, 7) Vector(23, 35) Vector(0, 0)
 print()
 print()
-print(v1+v2)
-print(v1*3)
-print(v2 * 10)
-print(bool(v1),bool(v2))
-print(bool(v3))
+print(v1+v2)                            # Vector(28, 42)
+print(v1*3)                             # Vector(15, 21)
+print(v2 * 10)                          # Vector(230, 350)
+print(bool(v1),bool(v2))                # True True
+print(bool(v3))                         # False

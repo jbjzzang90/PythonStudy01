@@ -3,22 +3,22 @@
 # 클래스안에 정의할 수 있는 특별한(Built-in) 메소드
 
 # 기본형
-print(int)
-print(float)
+print(int)                                  # <class 'int'>
+print(float)                                # <class 'float'>
 
 
 # 모든 속성 및 메소드 출력
-print(dir(int))
+print(dir(int))     
 print(dir(float))
 
 
 n = 10
 
-print(n + 100)
-print(n.__add__(100))
+print(n + 100)                              # 110
+print(n.__add__(100))                       # 110
 # print(n.__doc__) 코멘트
-print(n.__bool__, bool(n))
-print(n * 100, n.__mul__(100))
+print(n.__bool__, bool(n))                  # <method-wrapper '__bool__' of int object at 0x1043c0210> True
+print(n * 100, n.__mul__(100))              # 1000 1000
 
 print()
 print()
@@ -60,19 +60,19 @@ class Fruit :
 s1 = Fruit('Orange', 7500)
 s2 = Fruit('Banana', 3000)
 
-print(s1 + s2)
+print(s1 + s2)                  # 10500
 
 # 일번적인 계산
 #print(s1._price + s2._price)
 
 # 매직메소드
-print(s1 >= s2)
-print(s1 <= s2)
-print(s1 - s2)
-print(s2 - s1)
-print(s1)
-print(s2)
-print(dir(Fruit))
+print(s1 >= s2)                 # True
+print(s1 <= s2)                 # False
+print(s1 - s2)                  # 4500
+print(s2 - s1)                  # -4500
+print(s1)                       # Fruit Class Info : Orange , 7500
+print(s2)                       # Fruit Class Info : Banana , 3000
+print(dir(Fruit))                
 
 
 

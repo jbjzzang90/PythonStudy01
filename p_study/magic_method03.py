@@ -15,7 +15,7 @@ from math import sqrt
 from unicodedata import name
 
 l_leng1 = sqrt((pt1[0] - pt2[0]) ** 2 + (pt1[1] - pt2[1]) ** 2)
-print(l_leng1)
+print(l_leng1)          # 3.8078865529319543
 
 
 # 네임드 튜플 사용
@@ -32,7 +32,7 @@ pt4 = Point(2.5, 1.5)
 
 l_leng2 = sqrt((pt3.x - pt4.x) ** 2 + (pt3.y - pt4.y) ** 2)
 
-print(l_leng2)
+print(l_leng2)          # 3.8078865529319543
 
 
 # 네임드 튜블 선언 방법
@@ -42,7 +42,7 @@ Point3 = namedtuple('Point','x y')
 Point4 = namedtuple('Point','x y x class', rename=True) # Defalut = False
 
 # 출력
-print(Point1,Point2,Point3,Point4)
+print(Point1,Point2,Point3,Point4)  # <class '__main__.Point'> <class '__main__.Point'> <class '__main__.Point'> <class '__main__.Point'>
 
 # Dict to Unpacking
 temp_dict = {'x':75, 'y':55}
@@ -59,38 +59,38 @@ p5 =  Point2(**temp_dict)
 
 print()
 
-print(p1)
-print(p2)
-print(p3)
+print(p1)               # Point(x=10, y=35)
+print(p2)               # Point(x=20, y=40)
+print(p3)               # Point(x=45, y=20)
 # rname 테스트
-print(p4)
-print(p5)
+print(p4)               # Point(x=10, y=20, _2=30, _3=40)
+print(p5)               # Point(x=75, y=55)
 
 
 # 사용
-print(p1[0]+p2[1])
-print(p1.x + p2.y)
+print(p1[0]+p2[1])      # 50
+print(p1.x + p2.y)      # 50
 
 # unpacking
 x, y = p3
 
-print(x, y)
+print(x, y)             # 45 20
 
 # 네임드 튜플 메소드
 temp = [52, 38]
 
 # _make : 새로운 객체 생성
 p4 = Point1._make(temp)
-print(p4)
+print(p4)               # Point(x=52, y=38)
 
 
 
 # _fields : 필드 네임 확인
-print(p1._fields,p2._fields,p3._fields,p4._fields)
+print(p1._fields,p2._fields,p3._fields,p4._fields) # ('x', 'y') ('x', 'y') ('x', 'y') ('x', 'y')
 
 # _asdict() : OrderedDict 반환
-print(p1._asdict)
-print(p2._asdict)
+print(p1._asdict)                                  # <bound method Point._asdict of Point(x=10, y=35)>
+print(p2._asdict)                                  # <bound method Point._asdict of Point(x=20, y=40)>
 
 
 # 실 사용 실습
@@ -103,14 +103,14 @@ Classes = namedtuple('Classes',['rank', 'number'])
 numbers = [str(n) for n in range(1, 21)]
 ranks = 'A B C D'.split()
 
-print(numbers)
-print(ranks)
+print(numbers)          # ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20']
+print(ranks)            # ['A', 'B', 'C', 'D']
 
 # List Compregension
 studebts = [Classes(rank, number) for rank in ranks for number in numbers]
 
-print(len(studebts))
-print(studebts)
+print(len(studebts))    # 80
+print(studebts)         # [Classes(rank='A', number='1') ...... Classes(rank='D', number='20') 
 
 # 추천
 studebts2 = [Classes(rank, number)
@@ -119,5 +119,5 @@ studebts2 = [Classes(rank, number)
                         for n in range(1,21)]]
 
 
-print(len(studebts2))
-print(studebts2)
+print(len(studebts2))    # 80
+print(studebts2)         # [Classes(rank='A', number='1') ...... Classes(rank='D', number='20') 
