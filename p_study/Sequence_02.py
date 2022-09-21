@@ -11,9 +11,9 @@
 
 # b, a = a, b
 
-print(divmod(100, 9))
-print(divmod(*(100,9)))
-print(*(divmod(100,9)))
+print(divmod(100, 9))                               # (11, 1)
+print(divmod(*(100,9)))                             # (11, 1)
+print(*(divmod(100,9)))                             # 11, 1
 
 
 print()
@@ -37,20 +37,20 @@ print()
 l = (15, 20, 25)
 m = [15, 20, 25]
 
-print(l, id(l))
-print(m, id(m))
+print(l, id(l))                                     # (15, 20, 25) 4300675072
+print(m, id(m))                                     # [15, 20, 25] 4300983552
 
 l = l * 2
 m = m * 2
 
-print(l, id(l))
-print(m, id(m))
+print(l, id(l))                                     # (15, 20, 25, 15, 20, 25) 4300301376
+print(m, id(m))                                     # [15, 20, 25, 15, 20, 25] 4300983488
 
 l *= 2
 m *= 2
 
-print(l, id(l))
-print(m, id(m))
+print(l, id(l))                                     # (15, 20, 25, 15, 20, 25, 15, 20, 25, 15, 20, 25) 4300544256
+print(m, id(m))                                     # [15, 20, 25, 15, 20, 25, 15, 20, 25, 15, 20, 25] 4300983488
 
 print()
 print()

@@ -17,7 +17,7 @@
 t1 = (10, 20, (30, 40, 50))
 t2 = (10, 20, [30, 40, 50])
 
-print(hash(t1))
+print(hash(t1))                     # 465510690262297113
 # print(hash(t2)) # 예외
 
 print()
@@ -41,15 +41,15 @@ for k, v in source:
     else : 
         new_dict1[k] = [v]
 
-print(new_dict1)
+print(new_dict1)                        # {'k1': ['val1', 'val2'], 'k2': ['val3', 'val4', 'val5']}
 
 # Use Setedefault
 for k, v in source:
     new_dict2.setdefault(k, []).append(v)
-print(new_dict2)
+print(new_dict2)                        # {'k1': ['val1', 'val2'], 'k2': ['val3', 'val4', 'val5']}
 
 # 주의
 new_dict3 = {k: v for k, v in source}
-print(new_dict3)                        # 같은 키값에있는 데이터를 덮어씌움
+print(new_dict3)                        # 같은 키값에있는 데이터를 덮어씌움 {'k1': 'val2', 'k2': 'val5'}
 
 
