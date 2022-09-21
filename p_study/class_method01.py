@@ -44,8 +44,8 @@ car_detail_list = [
 del car_company_list[1]
 del car_detail_list[1]
 
-print(car_company_list)
-print(car_detail_list)
+print('car_company_list :',car_company_list)            # ['Ferrari', 'Audi']
+print('car_detail_list : ',car_detail_list)             # [{'colir': 'White', 'horsepower': 400, 'price': 8000}, {'colir': 'Silver', 'horsepower': 300, 'price': 6000}]
 
 print()
 print()
@@ -61,7 +61,7 @@ car_dicts = [
 ]
 
 del car_dicts[1]
-print(car_dicts)
+print('car_dicts :',car_dicts)                         #  [{'car_company': 'Ferrai', 'car_detail_1': {'colir': 'White', 'horsepower': 400, 'price': 8000}}, {'car_company': 'Audi', 'car_detail_1': {'colir': 'Silver', 'horsepower': 300, 'price': 6000}}]
 
 print()
 print()

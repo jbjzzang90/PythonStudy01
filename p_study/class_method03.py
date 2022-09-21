@@ -63,8 +63,8 @@ car2 =Car('Bmw',{'colir' : 'black','horsepower' : 270,'price' : 5000})
 
 
 # 전체정보
-car1.detail_info()
-car2.detail_info()
+car1.detail_info()                  # Current ID : 4308860400 Car Detail Info : Ferrai 8000
+car2.detail_info()                  # Current ID : 4308860304 Car Detail Info : Bmw 5000
 
 # 가격정보 (직접접근)
 print(car1._details.get('price'))   # 8000
@@ -87,16 +87,16 @@ print(car2.get_price_culc())    # After Car Price -> company : Bmw,price : 7000.
 Car.raise_price(1.9)
 
 # 가격 인상(인상 후)
-print(car1.get_price_culc())   
-print(car2.get_price_culc()) 
+print(car1.get_price_culc())   # After Car Price -> company : Ferrai,price : 15200.0
+print(car2.get_price_culc())   # After Car Price -> company : Bmw,price : 9500.0
 
 
 # 인스턴스 호출(Static)
-print(car1.is_bmw(car1))
-print(car2.is_bmw(car2))
+print(car1.is_bmw(car1))       # Sorry. This car is not Bmw
+print(car2.is_bmw(car2))       # OK! This cat is Bmw
 # 클래스 호출(Static)
-print(Car.is_bmw(car1))
-print(Car.is_bmw(car2))
+print(Car.is_bmw(car1))        # Sorry. This car is not Bmw
+print(Car.is_bmw(car2))        # OK! This cat is Bmw
 
 
 
