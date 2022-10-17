@@ -68,8 +68,8 @@ class Averager():
 averager_cls = Averager()
 
 # 누적
-print(averager_cls(10))
-print(averager_cls(30))
-print(averager_cls(50))
-print(averager_cls(70))
-print(averager_cls(193))
+print(averager_cls(10))                         # inner >> [10] / 1 10.0
+print(averager_cls(30))                         # inner >> [10, 30] / 2 20.0
+print(averager_cls(50))                         # inner >> [10, 30, 50] / 3 30.0
+print(averager_cls(70))                         # inner >> [10, 30, 50, 70] / 4 40.0
+print(averager_cls(193))                        # inner >> [10, 30, 50, 70, 193] / 5 70.6
